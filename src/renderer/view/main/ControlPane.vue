@@ -84,16 +84,16 @@
           <Icon :icon="IconType.SCORE" />
           <span :class="{ tooltip: compact }">{{ t.displayGameResults }}</span>
         </button>
-        <!-- 解析 -->
-        <button
-          v-show="store.appState === AppState.NORMAL"
-          class="control-item"
-          data-hotkey="Mod+a"
-          @click="onAnalysis"
-        >
-          <Icon :icon="IconType.ANALYSIS" />
-          <span :class="{ tooltip: compact }">{{ t.analysis }}</span>
-        </button>
+<!--        &lt;!&ndash; 解析 &ndash;&gt;-->
+<!--        <button-->
+<!--          v-show="store.appState === AppState.NORMAL"-->
+<!--          class="control-item"-->
+<!--          data-hotkey="Mod+a"-->
+<!--          @click="onAnalysis"-->
+<!--        >-->
+<!--          <Icon :icon="IconType.ANALYSIS" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.analysis }}</span>-->
+<!--        </button>-->
         <!-- 解析中断 -->
         <button
           v-show="store.appState === AppState.ANALYSIS"
@@ -104,16 +104,16 @@
           <Icon :icon="IconType.STOP" />
           <span :class="{ tooltip: compact }">{{ t.stopAnalysis }}</span>
         </button>
-        <!-- 詰み探索 -->
-        <button
-          v-show="store.appState === AppState.NORMAL"
-          class="control-item"
-          data-hotkey="Mod+m"
-          @click="onMateSearch"
-        >
-          <Icon :icon="IconType.MATE_SEARCH" />
-          <span :class="{ tooltip: compact }">{{ t.mateSearch }}</span>
-        </button>
+<!--        &lt;!&ndash; 詰み探索 &ndash;&gt;-->
+<!--        <button-->
+<!--          v-show="store.appState === AppState.NORMAL"-->
+<!--          class="control-item"-->
+<!--          data-hotkey="Mod+m"-->
+<!--          @click="onMateSearch"-->
+<!--        >-->
+<!--          <Icon :icon="IconType.MATE_SEARCH" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.mateSearch }}</span>-->
+<!--        </button>-->
         <!-- 詰み探索終了 -->
         <button
           v-show="store.appState === AppState.MATE_SEARCH"
@@ -124,15 +124,15 @@
           <Icon :icon="IconType.END" />
           <span :class="{ tooltip: compact }">{{ t.stopMateSearch }}</span>
         </button>
-        <!-- 局面編集 -->
-        <button
-          v-show="store.appState === AppState.NORMAL"
-          class="control-item"
-          @click="onStartEditPosition"
-        >
-          <Icon :icon="IconType.EDIT" />
-          <span :class="{ tooltip: compact }">{{ t.setupPosition }}</span>
-        </button>
+<!--        &lt;!&ndash; 局面編集 &ndash;&gt;-->
+<!--        <button-->
+<!--          v-show="store.appState === AppState.NORMAL"-->
+<!--          class="control-item"-->
+<!--          @click="onStartEditPosition"-->
+<!--        >-->
+<!--          <Icon :icon="IconType.EDIT" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.setupPosition }}</span>-->
+<!--        </button>-->
         <!-- 盤面編集終了 -->
         <button
           v-show="store.appState === AppState.POSITION_EDITING"
@@ -171,46 +171,46 @@
           <span :class="{ tooltip: compact }">{{ t.changePieceSet }}</span>
         </button>
       </div>
-      <div
-        v-show="group === ControlGroup.Group2 || group === ControlGroup.All"
-        class="full column control-box"
-      >
-        <!-- 指し手削除 -->
-        <button
-          class="control-item"
-          data-hotkey="Mod+d"
-          :disabled="store.appState !== AppState.NORMAL"
-          @click="onRemoveCurrentMove"
-        >
-          <Icon :icon="IconType.DELETE" />
-          <span :class="{ tooltip: compact }">{{ t.deleteMove }}</span>
-        </button>
-        <!-- ファイル -->
-        <button class="control-item" @click="onFileAction">
-          <Icon :icon="IconType.FILE" />
-          <span :class="{ tooltip: compact }">{{ t.file }}</span>
-        </button>
-        <!-- 盤面反転 -->
-        <button class="control-item" data-hotkey="Mod+t" @click="onFlip">
-          <Icon :icon="IconType.FLIP" />
-          <span :class="{ tooltip: compact }">{{ t.flipBoard }}</span>
-        </button>
-        <!-- エンジン設定 -->
-        <button
-          class="control-item"
-          data-hotkey="Mod+."
-          :disabled="store.appState !== AppState.NORMAL"
-          @click="onOpenEngines"
-        >
-          <Icon :icon="IconType.ENGINE_SETTINGS" />
-          <span :class="{ tooltip: compact }">{{ t.manageEngines }}</span>
-        </button>
-        <!-- アプリ設定 -->
-        <button class="control-item" data-hotkey="Mod+," @click="onOpenAppSettings">
-          <Icon :icon="IconType.SETTINGS" />
-          <span :class="{ tooltip: compact }">{{ t.appSettings }}</span>
-        </button>
-      </div>
+<!--      <div-->
+<!--        v-show="group === ControlGroup.Group2 || group === ControlGroup.All"-->
+<!--        class="full column control-box"-->
+<!--      >-->
+<!--        &lt;!&ndash; 指し手削除 &ndash;&gt;-->
+<!--        <button-->
+<!--          class="control-item"-->
+<!--          data-hotkey="Mod+d"-->
+<!--          :disabled="store.appState !== AppState.NORMAL"-->
+<!--          @click="onRemoveCurrentMove"-->
+<!--        >-->
+<!--          <Icon :icon="IconType.DELETE" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.deleteMove }}</span>-->
+<!--        </button>-->
+<!--        &lt;!&ndash; ファイル &ndash;&gt;-->
+<!--        <button class="control-item" @click="onFileAction">-->
+<!--          <Icon :icon="IconType.FILE" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.file }}</span>-->
+<!--        </button>-->
+<!--        &lt;!&ndash; 盤面反転 &ndash;&gt;-->
+<!--        <button class="control-item" data-hotkey="Mod+t" @click="onFlip">-->
+<!--          <Icon :icon="IconType.FLIP" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.flipBoard }}</span>-->
+<!--        </button>-->
+<!--        &lt;!&ndash; エンジン設定 &ndash;&gt;-->
+<!--        <button-->
+<!--          class="control-item"-->
+<!--          data-hotkey="Mod+."-->
+<!--          :disabled="store.appState !== AppState.NORMAL"-->
+<!--          @click="onOpenEngines"-->
+<!--        >-->
+<!--          <Icon :icon="IconType.ENGINE_SETTINGS" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.manageEngines }}</span>-->
+<!--        </button>-->
+<!--        &lt;!&ndash; アプリ設定 &ndash;&gt;-->
+<!--        <button class="control-item" data-hotkey="Mod+," @click="onOpenAppSettings">-->
+<!--          <Icon :icon="IconType.SETTINGS" />-->
+<!--          <span :class="{ tooltip: compact }">{{ t.appSettings }}</span>-->
+<!--        </button>-->
+<!--      </div>-->
       <GameMenu v-if="isGameMenuVisible" @close="isGameMenuVisible = false" />
       <FileMenu v-if="isFileMenuVisible" @close="isFileMenuVisible = false" />
       <InitialPositionMenu
@@ -275,7 +275,9 @@ onBeforeUnmount(() => {
 });
 
 const onGame = () => {
-  isGameMenuVisible.value = true;
+  // isGameMenuVisible.value = true;
+  store.showGameDialog();
+  emit("close");
 };
 
 const onShowGameResults = () => {
